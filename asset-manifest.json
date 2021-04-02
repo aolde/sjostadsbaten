@@ -1,8 +1,8 @@
 {
   "files": {
-    "main.css": "/boat-timetable/static/css/main.6713e341.chunk.css",
-    "main.js": "/boat-timetable/static/js/main.2eef2c97.chunk.js",
-    "main.js.map": "/boat-timetable/static/js/main.2eef2c97.chunk.js.map",
+    "main.css": "/boat-timetable/static/css/main.9a26c067.chunk.css",
+    "main.js": "/boat-timetable/static/js/main.c5315edf.chunk.js",
+    "main.js.map": "/boat-timetable/static/js/main.c5315edf.chunk.js.map",
     "runtime-main.js": "/boat-timetable/static/js/runtime-main.942d028d.js",
     "runtime-main.js.map": "/boat-timetable/static/js/runtime-main.942d028d.js.map",
     "static/js/2.c75e323e.chunk.js": "/boat-timetable/static/js/2.c75e323e.chunk.js",
@@ -10,13 +10,13 @@
     "static/js/3.c2190a10.chunk.js": "/boat-timetable/static/js/3.c2190a10.chunk.js",
     "static/js/3.c2190a10.chunk.js.map": "/boat-timetable/static/js/3.c2190a10.chunk.js.map",
     "index.html": "/boat-timetable/index.html",
-    "static/css/main.6713e341.chunk.css.map": "/boat-timetable/static/css/main.6713e341.chunk.css.map",
+    "static/css/main.9a26c067.chunk.css.map": "/boat-timetable/static/css/main.9a26c067.chunk.css.map",
     "static/js/2.c75e323e.chunk.js.LICENSE.txt": "/boat-timetable/static/js/2.c75e323e.chunk.js.LICENSE.txt"
   },
   "entrypoints": [
     "static/js/runtime-main.942d028d.js",
     "static/js/2.c75e323e.chunk.js",
-    "static/css/main.6713e341.chunk.css",
-    "static/js/main.2eef2c97.chunk.js"
+    "static/css/main.9a26c067.chunk.css",
+    "static/js/main.c5315edf.chunk.js"
   ]
 }
