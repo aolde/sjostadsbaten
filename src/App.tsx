@@ -1,5 +1,9 @@
 import "./App.css";
-import { getNextDeparture, relativeTime } from "./services/timetable";
+import {
+    getNextDeparture,
+    isWeekend,
+    relativeTime,
+} from "./services/timetable";
 import useForceUpdate from "./utils/hooks/useForceUpdate";
 import useInterval from "./utils/hooks/useInterval";
 
@@ -23,7 +27,7 @@ function App() {
                     height="128"
                 />
 
-                <h1>Nästa avgång i Sjöstadstrafiken</h1>
+                <h1 className="App-heading">Nästa avgång i Sjöstadstrafiken</h1>
 
                 <p className="App-depRow">
                     <strong>Lumabryggan</strong>{" "}
@@ -44,6 +48,12 @@ function App() {
                     <span className="App-depTime">
                         &nbsp;({nextDepHenriksdal.format("HH:mm")})
                     </span>
+                </p>
+
+                <p className="App-timeTableType">
+                    <small>
+                        {isWeekend() ? "Helgtidtabell" : "Vardagstidtabell"}
+                    </small>
                 </p>
             </header>
         </div>

@@ -32,13 +32,14 @@ body {
     color: white;
 }
 
-.App-smallHeading {
-    margin: 0.5em;
+.App-heading {
+    margin-bottom: 0;
 }
 
 .App-depRow {
-    margin-top: 0.1rem;
-    padding-top: 1.1rem;
+    margin-bottom: 0;
+    margin-top: 1em;
+    padding-top: 1em;
     width: 100%;
     border-top: 1px solid #3d4350;
     letter-spacing: 0.05rem;
@@ -64,4 +65,10 @@ body {
 .App-depTime {
     color: rgba(255, 255, 255, 0.5);
     font-size: 0.8em;
+}
+
+.App-timeTableType {
+    color: rgba(255, 255, 255, 0.5);
+    margin-top: 2em;
+    font-size: 0.9em;
 }
