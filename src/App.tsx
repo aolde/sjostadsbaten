@@ -52,7 +52,9 @@ function App() {
 
                 <p className="App-timeTableType">
                     <small>
-                        {isWeekend() ? "Helgtidtabell" : "Vardagstidtabell"}
+                        {isWeekend()
+                            ? "Visar helgtidtabell"
+                            : "Visar vardagstidtabell"}
                     </small>
                 </p>
             </header>
