@@ -18,25 +18,26 @@ function App() {
             <header className="App-header">
                 <img
                     src={process.env.PUBLIC_URL + "/android-chrome-192x192.png"}
+                    alt="Nästa avgång i Sjöstadstrafiken"
                 />
-                <h1>Sjöstadstrafiken</h1>
 
-                <p>
-                    Båten går från <strong>Lumabryggan</strong>{" "}
+                <h1>Nästa avgång i Sjöstadstrafiken</h1>
+
+                <p className="App-depRow">
+                    <strong>Lumabryggan</strong>{" "}
                     {relativeTime(nextDepLumabryggan)}
                     <span className="App-depTime">
                         &nbsp;({nextDepLumabryggan.format("HH:mm")})
                     </span>
                 </p>
-                <p>
-                    Båten går från <strong>Barnängen</strong>{" "}
-                    {relativeTime(nextDepBarnängen)}
+                <p className="App-depRow">
+                    <strong>Barnängen</strong> {relativeTime(nextDepBarnängen)}
                     <span className="App-depTime">
                         &nbsp;({nextDepBarnängen.format("HH:mm")})
                     </span>
                 </p>
-                <p>
-                    Båten går från <strong>Henriksdal</strong>{" "}
+                <p className="App-depRow">
+                    <strong>Henriksdal</strong>{" "}
                     {relativeTime(nextDepHenriksdal)}
                     <span className="App-depTime">
                         &nbsp;({nextDepHenriksdal.format("HH:mm")})
