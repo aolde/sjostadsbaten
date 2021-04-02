@@ -1,26 +1,30 @@
-import React from 'react';
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import { getNextDeparture, relativeTime } from "./services/timetable";
+import useForceUpdate from "./utils/hooks/useForceUpdate";
+import useInterval from "./utils/hooks/useInterval";
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.tsx</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    const nextDep = getNextDeparture("lumabryggan");
+    const forceUpdate = useForceUpdate();
+
+    useInterval(() => {
+        forceUpdate();
+        console.log("render");
+    }, 1000);
+
+    return (
+        <div className="App">
+            <header className="App-header">
+                <h1>Sjöstadstrafiken</h1>
+                <p>
+                    Båten går från Lumabryggan {relativeTime(nextDep)}
+                    <span className="App-depTime">
+                        &nbsp;({nextDep.format("HH:mm")})
+                    </span>
+                </p>
+            </header>
+        </div>
+    );
 }
 
 export default App;
