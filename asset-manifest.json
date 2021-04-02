@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/boat-timetable/static/css/main.d3cb9c83.chunk.css",
-    "main.js": "/boat-timetable/static/js/main.fa8b1210.chunk.js",
-    "main.js.map": "/boat-timetable/static/js/main.fa8b1210.chunk.js.map",
+    "main.js": "/boat-timetable/static/js/main.cb17c505.chunk.js",
+    "main.js.map": "/boat-timetable/static/js/main.cb17c505.chunk.js.map",
     "runtime-main.js": "/boat-timetable/static/js/runtime-main.942d028d.js",
     "runtime-main.js.map": "/boat-timetable/static/js/runtime-main.942d028d.js.map",
     "static/js/2.c75e323e.chunk.js": "/boat-timetable/static/js/2.c75e323e.chunk.js",
@@ -17,6 +17,6 @@
     "static/js/runtime-main.942d028d.js",
     "static/js/2.c75e323e.chunk.js",
     "static/css/main.d3cb9c83.chunk.css",
-    "static/js/main.fa8b1210.chunk.js"
+    "static/js/main.cb17c505.chunk.js"
   ]
 }
