@@ -17,8 +17,10 @@ function App() {
         <div className="App">
             <header className="App-header">
                 <img
-                    src={process.env.PUBLIC_URL + "/android-chrome-192x192.png"}
+                    src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"}
                     alt="Nästa avgång i Sjöstadstrafiken"
+                    width="128"
+                    height="128"
                 />
 
                 <h1>Nästa avgång i Sjöstadstrafiken</h1>
