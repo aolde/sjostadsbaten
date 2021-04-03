@@ -1,6 +1,7 @@
 {
-    "short_name": "Sjöstadstrafiken",
-    "name": "Nästa avgång för Sjöstadsbåten",
+    "short_name": "Sjöstadsbåten",
+    "name": "Sjöstadsbåten",
+    "description": "Visar avgångstider för båttrafiken mellan Hammarby Sjöstad och Söder.",
     "icons": [
         {
             "src": "android-chrome-192x192.png",
@@ -16,5 +17,5 @@
     "start_url": ".",
     "display": "standalone",
     "theme_color": "#000000",
-    "background_color": "#ffffff"
+    "background_color": "#282c34"
 }

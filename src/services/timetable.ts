@@ -515,7 +515,11 @@ export function getNextDeparture(
 }
 
 export function relativeTime(time: dayjs.Dayjs, now = dayjs()) {
-    return time.from(now);
+    return time.from(now, true);
+}
+
+export function formatTime(date: dayjs.Dayjs) {
+    return date.format("HH:mm");
 }
 
 export function isWeekendTraffic(day: dayjs.Dayjs = dayjs()) {

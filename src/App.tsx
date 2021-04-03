@@ -1,5 +1,7 @@
 import "./App.css";
+// import usePWA from "react-pwa-install-prompt";
 import {
+    formatTime,
     getHoliday,
     getNextDeparture,
     isWeekendTraffic,
@@ -10,6 +12,8 @@ import useInterval from "./utils/hooks/useInterval";
 import dayjs from "dayjs";
 
 function App() {
+    // const { isStandalone, isInstallPromptSupported, promptInstall } = usePWA();
+
     const now = dayjs();
     const nextDepLumabryggan = getNextDeparture("lumabryggan", now);
     const nextDepBarnängen = getNextDeparture("barnängen", now);
@@ -22,38 +26,54 @@ function App() {
         forceUpdate();
     }, 1000);
 
+    // const onClickInstall = async () => {
+    //     const didInstall = await promptInstall();
+    //     if (didInstall) {
+    //         // User accepted PWA install
+    //     }
+    // };
+    // const renderInstallButton = () => {
+    //     if (isInstallPromptSupported && isStandalone)
+    //         return <button onClick={onClickInstall}>Prompt PWA Install</button>;
+    //     return null;
+    // };
+
     return (
         <div className="App">
             <header className="App-header">
                 <img
                     src={process.env.PUBLIC_URL + "/android-chrome-512x512.png"}
-                    alt="Nästa avgång i Sjöstadstrafiken"
-                    width="128"
-                    height="128"
+                    alt="Sjöstadsbåten"
+                    width="64"
+                    height="64"
+                    className="App-logo"
                 />
+                <span className="App-logoText">Sjöstadsbåten</span>
+            </header>
 
-                <h1 className="App-heading">Nästa avgång i Sjöstadstrafiken</h1>
+            <main className="App-main">
+                <h2 className="App-heading">Nästa avgång</h2>
 
                 <div className="App-departures">
                     <p className="App-depRow">
                         <strong>Lumabryggan</strong>{" "}
-                        {relativeTime(nextDepLumabryggan, now)}
+                        <span>{relativeTime(nextDepLumabryggan, now)}</span>
                         <span className="App-depTime">
-                            &nbsp;({nextDepLumabryggan.format("HH:mm")})
+                            &nbsp;{formatTime(nextDepLumabryggan)}
                         </span>
                     </p>
                     <p className="App-depRow">
                         <strong>Barnängen</strong>{" "}
                         {relativeTime(nextDepBarnängen, now)}
                         <span className="App-depTime">
-                            &nbsp;({nextDepBarnängen.format("HH:mm")})
+                            &nbsp;{formatTime(nextDepBarnängen)}
                         </span>
                     </p>
                     <p className="App-depRow">
                         <strong>Henriksdal</strong>{" "}
                         {relativeTime(nextDepHenriksdal, now)}
                         <span className="App-depTime">
-                            &nbsp;({nextDepHenriksdal.format("HH:mm")})
+                            &nbsp;{formatTime(nextDepHenriksdal)}
                         </span>
                     </p>
                 </div>
@@ -67,7 +87,14 @@ function App() {
                             : "Visar vardagstidtabell"}
                     </small>
                 </p>
-            </header>
+
+                {/* <p>
+                    Is Install Prompt Supported ?{" "}
+                    {isInstallPromptSupported ? "true" : "false"}
+                </p>
+                <p>Is Standalone ? {isStandalone ? "true" : "false"}</p>
+                {renderInstallButton()} */}
+            </main>
         </div>
     );
 }
