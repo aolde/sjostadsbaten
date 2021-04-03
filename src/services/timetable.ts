@@ -488,8 +488,10 @@ const timeTable = {
     },
 };
 
-export function getNextDeparture(from: keyof typeof timeTable.weekdays) {
-    const now = dayjs();
+export function getNextDeparture(
+    from: keyof typeof timeTable.weekdays,
+    now: dayjs.Dayjs = dayjs()
+): dayjs.Dayjs {
     const times = isWeekendTraffic(now)
         ? timeTable.weekends
         : timeTable.weekdays;
@@ -499,18 +501,21 @@ export function getNextDeparture(from: keyof typeof timeTable.weekdays) {
             .split(":")
             .map((part) => parseFloat(part));
 
-        const time = dayjs().hour(hour).minute(minute).second(0);
+        const time = now.hour(hour).minute(minute).second(0);
 
         if (time.isSameOrAfter(now, "second")) {
             return time;
         }
     }
 
-    return dayjs();
+    return getNextDeparture(
+        from,
+        now.add(1, "day").hour(0).minute(0).second(0)
+    );
 }
 
-export function relativeTime(time: dayjs.Dayjs) {
-    return time.fromNow();
+export function relativeTime(time: dayjs.Dayjs, now = dayjs()) {
+    return time.from(now);
 }
 
 export function isWeekendTraffic(day: dayjs.Dayjs = dayjs()) {
