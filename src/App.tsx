@@ -1,7 +1,8 @@
 import "./App.css";
 import {
+    getHoliday,
     getNextDeparture,
-    isWeekend,
+    isWeekendTraffic,
     relativeTime,
 } from "./services/timetable";
 import useForceUpdate from "./utils/hooks/useForceUpdate";
@@ -11,6 +12,8 @@ function App() {
     const nextDepLumabryggan = getNextDeparture("lumabryggan");
     const nextDepBarnängen = getNextDeparture("barnängen");
     const nextDepHenriksdal = getNextDeparture("henriksdal");
+    const weekendTraffic = isWeekendTraffic();
+    const holiday = getHoliday();
     const forceUpdate = useForceUpdate();
 
     useInterval(() => {
@@ -29,31 +32,36 @@ function App() {
 
                 <h1 className="App-heading">Nästa avgång i Sjöstadstrafiken</h1>
 
-                <p className="App-depRow">
-                    <strong>Lumabryggan</strong>{" "}
-                    {relativeTime(nextDepLumabryggan)}
-                    <span className="App-depTime">
-                        &nbsp;({nextDepLumabryggan.format("HH:mm")})
-                    </span>
-                </p>
-                <p className="App-depRow">
-                    <strong>Barnängen</strong> {relativeTime(nextDepBarnängen)}
-                    <span className="App-depTime">
-                        &nbsp;({nextDepBarnängen.format("HH:mm")})
-                    </span>
-                </p>
-                <p className="App-depRow">
-                    <strong>Henriksdal</strong>{" "}
-                    {relativeTime(nextDepHenriksdal)}
-                    <span className="App-depTime">
-                        &nbsp;({nextDepHenriksdal.format("HH:mm")})
-                    </span>
-                </p>
+                <div className="App-departures">
+                    <p className="App-depRow">
+                        <strong>Lumabryggan</strong>{" "}
+                        {relativeTime(nextDepLumabryggan)}
+                        <span className="App-depTime">
+                            &nbsp;({nextDepLumabryggan.format("HH:mm")})
+                        </span>
+                    </p>
+                    <p className="App-depRow">
+                        <strong>Barnängen</strong>{" "}
+                        {relativeTime(nextDepBarnängen)}
+                        <span className="App-depTime">
+                            &nbsp;({nextDepBarnängen.format("HH:mm")})
+                        </span>
+                    </p>
+                    <p className="App-depRow">
+                        <strong>Henriksdal</strong>{" "}
+                        {relativeTime(nextDepHenriksdal)}
+                        <span className="App-depTime">
+                            &nbsp;({nextDepHenriksdal.format("HH:mm")})
+                        </span>
+                    </p>
+                </div>
 
                 <p className="App-timeTableType">
                     <small>
-                        {isWeekend()
-                            ? "Visar helgtidtabell"
+                        {weekendTraffic
+                            ? holiday
+                                ? `Visar helgtidtabell (${holiday.holiday})`
+                                : "Visar helgtidtabell"
                             : "Visar vardagstidtabell"}
                     </small>
                 </p>

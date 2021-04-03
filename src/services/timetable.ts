@@ -2,6 +2,7 @@ import dayjs from "dayjs";
 import relativeTimePlugin from "dayjs/plugin/relativeTime";
 import isLeapYearPlugin from "dayjs/plugin/isLeapYear";
 import isSameOrAfterPlugin from "dayjs/plugin/isSameOrAfter";
+import holidays from "./holidays";
 import "dayjs/locale/sv";
 
 dayjs.extend(isLeapYearPlugin);
@@ -489,7 +490,9 @@ const timeTable = {
 
 export function getNextDeparture(from: keyof typeof timeTable.weekdays) {
     const now = dayjs();
-    const times = isWeekend(now) ? timeTable.weekends : timeTable.weekdays;
+    const times = isWeekendTraffic(now)
+        ? timeTable.weekends
+        : timeTable.weekdays;
 
     for (const departureTime of times[from]) {
         const [hour, minute] = departureTime
@@ -510,8 +513,17 @@ export function relativeTime(time: dayjs.Dayjs) {
     return time.fromNow();
 }
 
-export function isWeekend(day: dayjs.Dayjs = dayjs()) {
+export function isWeekendTraffic(day: dayjs.Dayjs = dayjs()) {
     const dayOfWeek = day.day();
     const isWeekend = dayOfWeek === 0 || dayOfWeek === 6;
-    return isWeekend;
+
+    if (isWeekend) return true;
+
+    const holiday = getHoliday(day);
+    return Boolean(holiday);
+}
+
+export function getHoliday(day: dayjs.Dayjs = dayjs()) {
+    const date = day.format("YYYY-MM-DD");
+    return holidays.find((day) => day.date === date);
 }
