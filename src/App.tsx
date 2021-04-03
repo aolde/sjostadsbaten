@@ -10,7 +10,7 @@ import useInterval from "./utils/hooks/useInterval";
 import dayjs from "dayjs";
 
 function App() {
-    const now = dayjs().hour(23).minute(56).second(0);
+    const now = dayjs();
     const nextDepLumabryggan = getNextDeparture("lumabryggan", now);
     const nextDepBarnängen = getNextDeparture("barnängen", now);
     const nextDepHenriksdal = getNextDeparture("henriksdal", now);
