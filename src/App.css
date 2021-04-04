@@ -64,13 +64,8 @@ body {
     display: flex;
     column-gap: 1em;
     align-items: center;
-    justify-content: center;
-}
-
-.App-depRow strong {
-}
-
-.App-departures {
+    justify-content: space-between;
+    background-color: #3d4350;
 }
 
 .App-link {

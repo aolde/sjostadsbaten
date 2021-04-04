@@ -57,24 +57,24 @@ function App() {
                 <div className="App-departures">
                     <p className="App-depRow">
                         <strong>Lumabryggan</strong>{" "}
-                        <span>{relativeTime(nextDepLumabryggan, now)}</span>
                         <span className="App-depTime">
                             &nbsp;{formatTime(nextDepLumabryggan)}
                         </span>
+                        <span>{relativeTime(nextDepLumabryggan, now)}</span>
                     </p>
                     <p className="App-depRow">
                         <strong>Barnängen</strong>{" "}
-                        {relativeTime(nextDepBarnängen, now)}
                         <span className="App-depTime">
                             &nbsp;{formatTime(nextDepBarnängen)}
                         </span>
+                        {relativeTime(nextDepBarnängen, now)}
                     </p>
                     <p className="App-depRow">
                         <strong>Henriksdal</strong>{" "}
-                        {relativeTime(nextDepHenriksdal, now)}
                         <span className="App-depTime">
                             &nbsp;{formatTime(nextDepHenriksdal)}
                         </span>
+                        {relativeTime(nextDepHenriksdal, now)}
                     </p>
                 </div>
 
