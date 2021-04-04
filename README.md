@@ -1,6 +1,13 @@
-# Getting Started with Create React App
+<h1 align="center">
+  <br>
+  <a href="https://sjöstadsbåten.se"><img src="sjostadsbaten.png" alt="Sjöstadsbåten" width="300"></a>
+  <br>
+  Sjöstadsbåten
+  <br>
+</h1>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+<h4 align="center">See the next departure time for the ferry boats in Sjöstaden 🚣‍♀️</h4>
+
 
 ## Available Scripts
 
