@@ -30,13 +30,13 @@ body {
     aspect-ratio: 1 / 1;
     background: #ffcb85;
     border-radius: 12px;
+    margin-right: 0.1em;
 }
 
 .App-logoText {
     font-size: 1.4em;
     letter-spacing: 0.05rem;
     text-transform: uppercase;
-
     color: #fff;
 }
 
@@ -63,7 +63,6 @@ body {
 
     box-sizing: border-box;
     display: flex;
-    column-gap: 1em;
     align-items: center;
     justify-content: space-between;
     background-color: #3d4350;
@@ -89,7 +88,6 @@ body {
 .App-completeTimeTable {
     overflow: auto;
     display: flex;
-    gap: 10px;
     padding: 0.2em 0;
     align-items: center;
     scroll-snap-type: x mandatory;
@@ -104,4 +102,5 @@ body {
     padding: 6px 12px;
     border-radius: 6px;
     scroll-snap-align: start;
+    margin-right: 10px;
 }
