@@ -83,4 +83,25 @@ body {
     margin-top: 2em;
     font-size: 0.9em;
     text-align: center;
+    line-height: 1.6em;
+}
+
+.App-completeTimeTable {
+    overflow: auto;
+    display: flex;
+    gap: 10px;
+    padding: 0.2em 0;
+    align-items: center;
+    scroll-snap-type: x mandatory;
+}
+.App-ctt-heading {
+    font-size: 0.8em;
+    font-weight: normal;
+    margin: 1em 0 0.3em;
+}
+.App-timeTag {
+    background-color: #3d4350;
+    padding: 6px 12px;
+    border-radius: 6px;
+    scroll-snap-align: start;
 }

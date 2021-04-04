@@ -10,7 +10,7 @@ dayjs.extend(relativeTimePlugin);
 dayjs.extend(isSameOrAfterPlugin);
 dayjs.locale("sv");
 
-const timeTable = {
+export const timeTable = {
     weekdays: {
         lumabryggan: [
             "00:05",

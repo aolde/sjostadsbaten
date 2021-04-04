@@ -8,6 +8,8 @@ import {
 } from "./services/timetable";
 import useForceUpdate from "./utils/hooks/useForceUpdate";
 import useInterval from "./utils/hooks/useInterval";
+import Collapsable from "./components/Collapsable";
+import FullTimeTable from "./components/FullTimeTable";
 import dayjs from "dayjs";
 
 function App() {
@@ -22,6 +24,18 @@ function App() {
     useInterval(() => {
         forceUpdate();
     }, 1000);
+
+    const departureHeader = (stopName: string, nextDeparture: dayjs.Dayjs) => {
+        return (
+            <p className="App-depRow">
+                <strong>{stopName}</strong>{" "}
+                <span className="App-depTime">
+                    &nbsp;{formatTime(nextDeparture)}
+                </span>
+                <span>{relativeTime(nextDeparture, now)}</span>
+            </p>
+        );
+    };
 
     return (
         <div className="App">
@@ -40,27 +54,38 @@ function App() {
                 <h2 className="App-heading">Nästa avgång</h2>
 
                 <div className="App-departures">
-                    <p className="App-depRow">
-                        <strong>Lumabryggan</strong>{" "}
-                        <span className="App-depTime">
-                            &nbsp;{formatTime(nextDepLumabryggan)}
-                        </span>
-                        <span>{relativeTime(nextDepLumabryggan, now)}</span>
-                    </p>
-                    <p className="App-depRow">
-                        <strong>Barnängen</strong>{" "}
-                        <span className="App-depTime">
-                            &nbsp;{formatTime(nextDepBarnängen)}
-                        </span>
-                        {relativeTime(nextDepBarnängen, now)}
-                    </p>
-                    <p className="App-depRow">
-                        <strong>Henriksdal</strong>{" "}
-                        <span className="App-depTime">
-                            &nbsp;{formatTime(nextDepHenriksdal)}
-                        </span>
-                        {relativeTime(nextDepHenriksdal, now)}
-                    </p>
+                    <Collapsable
+                        header={departureHeader(
+                            "Lumabryggan",
+                            nextDepLumabryggan
+                        )}
+                    >
+                        <FullTimeTable
+                            stop="lumabryggan"
+                            selectedTime={formatTime(nextDepLumabryggan)}
+                        />
+                    </Collapsable>
+
+                    <Collapsable
+                        header={departureHeader("Barnängen", nextDepBarnängen)}
+                    >
+                        <FullTimeTable
+                            stop="barnängen"
+                            selectedTime={formatTime(nextDepBarnängen)}
+                        />
+                    </Collapsable>
+
+                    <Collapsable
+                        header={departureHeader(
+                            "Henriksdal",
+                            nextDepHenriksdal
+                        )}
+                    >
+                        <FullTimeTable
+                            stop="henriksdal"
+                            selectedTime={formatTime(nextDepHenriksdal)}
+                        />
+                    </Collapsable>
                 </div>
 
                 <p className="App-timeTableType">
@@ -70,6 +95,8 @@ function App() {
                                 ? `Visar helgtidtabell (${holiday.holiday})`
                                 : "Visar helgtidtabell"
                             : "Visar vardagstidtabell"}
+                        <br />
+                        Gäller t.o.m. 24 juni 2021
                     </small>
                 </p>
             </main>
