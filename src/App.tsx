@@ -1,5 +1,4 @@
 import "./App.css";
-// import usePWA from "react-pwa-install-prompt";
 import {
     formatTime,
     getHoliday,
@@ -12,8 +11,6 @@ import useInterval from "./utils/hooks/useInterval";
 import dayjs from "dayjs";
 
 function App() {
-    // const { isStandalone, isInstallPromptSupported, promptInstall } = usePWA();
-
     const now = dayjs();
     const nextDepLumabryggan = getNextDeparture("lumabryggan", now);
     const nextDepBarnängen = getNextDeparture("barnängen", now);
@@ -25,18 +22,6 @@ function App() {
     useInterval(() => {
         forceUpdate();
     }, 1000);
-
-    // const onClickInstall = async () => {
-    //     const didInstall = await promptInstall();
-    //     if (didInstall) {
-    //         // User accepted PWA install
-    //     }
-    // };
-    // const renderInstallButton = () => {
-    //     if (isInstallPromptSupported && isStandalone)
-    //         return <button onClick={onClickInstall}>Prompt PWA Install</button>;
-    //     return null;
-    // };
 
     return (
         <div className="App">
@@ -87,13 +72,6 @@ function App() {
                             : "Visar vardagstidtabell"}
                     </small>
                 </p>
-
-                {/* <p>
-                    Is Install Prompt Supported ?{" "}
-                    {isInstallPromptSupported ? "true" : "false"}
-                </p>
-                <p>Is Standalone ? {isStandalone ? "true" : "false"}</p>
-                {renderInstallButton()} */}
             </main>
         </div>
     );

@@ -1,5 +1,6 @@
 .App {
     font-family: "Fjalla One", sans-serif;
+    letter-spacing: 0.07rem;
 }
 
 h1 {
@@ -59,7 +60,7 @@ body {
     border-radius: 12px;
     width: 100%;
     border: 1px solid #3d4350;
-    letter-spacing: 0.05rem;
+
     box-sizing: border-box;
     display: flex;
     column-gap: 1em;
