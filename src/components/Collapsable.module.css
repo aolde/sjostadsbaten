@@ -1,0 +1,16 @@
+.button {
+    background: none;
+    border: none;
+    color: inherit;
+    font-family: inherit;
+    font-size: inherit;
+    padding: 0;
+    letter-spacing: inherit;
+    width: 100%;
+    -webkit-tap-highlight-color: transparent;
+}
+.button:active,
+.button:hover,
+.button:focus {
+    outline: none;
+}
