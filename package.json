@@ -26,6 +26,8 @@
         "eject": "react-scripts eject",
         "predeploy": "npm run build",
         "deploy": "gh-pages -d build",
+        "docker:build": "docker build -t sjostadsbaten .",
+        "docker:run": "docker run -p 3001:80 sjostadsbaten",
         "gen:holidays": "ts-node scripts/holidays.ts"
     },
     "eslintConfig": {
