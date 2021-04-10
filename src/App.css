@@ -103,3 +103,7 @@ body {
     scroll-snap-align: start;
     margin-right: 10px;
 }
+
+.App-github {
+    color: rgba(255, 255, 255, 0.5);
+}

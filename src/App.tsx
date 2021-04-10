@@ -97,6 +97,17 @@ function App() {
                             : "Visar vardagstidtabell"}
                         <br />
                         Gäller t.o.m. 24 juni 2021
+                        <br />
+                        <small>
+                            <a
+                                href="https://github.com/aolde/sjostadsbaten"
+                                target="_blank"
+                                rel="noreferrer"
+                                className="App-github"
+                            >
+                                Github
+                            </a>
+                        </small>
                     </small>
                 </p>
             </main>
