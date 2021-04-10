@@ -7,7 +7,11 @@
 </h1>
 
 <h4 align="center">See the next departure time for the ferry boats in Sjöstaden 🚣‍♀️</h4>
+<p align="center">https://sjöstadsbåten.se/</p>
 
+## Docker
+
+Docker image available at https://hub.docker.com/r/aolde/sjostadsbaten
 
 ## Available Scripts
 
