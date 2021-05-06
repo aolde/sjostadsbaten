@@ -55,6 +55,7 @@ function App() {
 
                 <div className="App-departures">
                     <Collapsable
+                        name="Lumabryggan"
                         header={departureHeader(
                             "Lumabryggan",
                             nextDepLumabryggan
@@ -67,6 +68,7 @@ function App() {
                     </Collapsable>
 
                     <Collapsable
+                        name="Barnängen"
                         header={departureHeader("Barnängen", nextDepBarnängen)}
                     >
                         <FullTimeTable
@@ -76,6 +78,7 @@ function App() {
                     </Collapsable>
 
                     <Collapsable
+                        name="Henriksdal"
                         header={departureHeader(
                             "Henriksdal",
                             nextDepHenriksdal
