@@ -1,11 +1,11 @@
 <h1 align="center">
   <br>
-  <a href="https://sjöstadsbåten.se"><img src="sjostadsbaten.png" alt="Sjöstadsbåten" width="300"></a>
+  <a href="https://sjöstadsbåten.se"><img src="sjostadsbaten.png" alt="Sjöstadsbåten" width="300" /></a>
   <br>
   Sjöstadsbåten
   <br>
 </h1>
-
+<p align="center"><a href="https://github.com/aolde/sjostadsbaten/actions/workflows/node.js.yml"><img src="https://github.com/aolde/sjostadsbaten/actions/workflows/node.js.yml/badge.svg" alt="CI status" /></a></p>
 <h4 align="center">See the next departure time for the ferry boats in Sjöstaden 🚣‍♀️</h4>
 <p align="center">https://sjöstadsbåten.se/</p>
 
