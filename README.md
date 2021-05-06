@@ -1,6 +1,6 @@
 <h1 align="center">
   <br>
-  <a href="https://sjöstadsbåten.se"><img src="sjostadsbaten.png" alt="Sjöstadsbåten" width="300" /></a>
+  <a href="https://sjöstadsbåten.se"><img src="https://raw.githubusercontent.com/aolde/sjostadsbaten/main/sjostadsbaten.png" alt="Sjöstadsbåten" width="300" /></a>
   <br>
   Sjöstadsbåten
   <br>
