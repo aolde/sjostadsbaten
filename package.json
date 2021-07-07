@@ -50,7 +50,7 @@
         ]
     },
     "devDependencies": {
-        "@types/mixpanel-browser": "2.35.6",
+        "@types/mixpanel-browser": "2.35.7",
         "axios": "0.21.1",
         "ts-node": "9.1.1"
     }
