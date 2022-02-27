@@ -99,7 +99,7 @@ function App() {
                                 : "Visar helgtidtabell"
                             : "Visar vardagstidtabell"}
                         <br />
-                        Gäller t.o.m. 24 juni 2021
+                        Gäller t.o.m. 24 juni 2022
                         <br />
                         <small>
                             <a
