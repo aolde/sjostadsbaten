@@ -199,7 +199,7 @@ function App() {
             <Sheet
                 isOpen={settingsOpen}
                 onClose={() => setSettingsOpen(false)}
-                snapPoints={[600, 420, 0]}
+                snapPoints={[600, 430, 0]}
                 initialSnap={1}
             >
                 {/* @ts-expect-error */}
