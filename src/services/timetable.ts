@@ -515,6 +515,9 @@ export function getNextDeparture(
 }
 
 export function relativeTime(time: dayjs.Dayjs, now = dayjs()) {
+    if (now.isAfter(time)) {
+        return "För sent";
+    }
     return time.from(now, true);
 }
 
