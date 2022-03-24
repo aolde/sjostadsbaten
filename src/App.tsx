@@ -11,7 +11,6 @@ import Collapsable from "./components/Collapsable";
 import FullTimeTable from "./components/FullTimeTable";
 import dayjs from "dayjs";
 import React, { useState } from "react";
-import { useInput } from "./utils/hooks/useInput";
 import { useLocalStorage } from "./utils/hooks/useLocalStorage";
 import { useDepartureTimes } from "./services/useDepartureTimes";
 import { Settings } from "./components/Settings";
