@@ -1,11 +1,2 @@
-const holidays = [
-    { date: "2021-01-01", holiday: "Nyårsdagen" },
-    { date: "2021-01-06", holiday: "Trettondedag jul" },
-    { date: "2021-04-02", holiday: "Långfredagen" },
-    { date: "2021-04-05", holiday: "Annandag påsk" },
-    { date: "2021-05-13", holiday: "Kristi himmelsfärdsdag" },
-    { date: "2021-06-25", holiday: "Midsommarafton" },
-    { date: "2021-12-24", holiday: "Julafton" },
-    { date: "2021-12-31", holiday: "Nyårsafton" },
-];
+const holidays = [{"date":"2022-01-06","holiday":"Trettondedag jul"},{"date":"2022-04-15","holiday":"Långfredagen"},{"date":"2022-04-18","holiday":"Annandag påsk"},{"date":"2022-05-26","holiday":"Kristi himmelsfärdsdag"},{"date":"2022-06-24","holiday":"Midsommarafton"},{"date":"2022-12-24","holiday":"Julafton"},{"date":"2022-12-26","holiday":"Annandag jul"},{"date":"2022-12-31","holiday":"Nyårsafton"}];
 export default holidays;

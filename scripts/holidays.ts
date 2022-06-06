@@ -12,7 +12,7 @@ import path from "path";
 
 async function init() {
     const response = await axios.get<Response>(
-        "https://sholiday.faboul.se/dagar/v2.1/2021"
+        "https://sholiday.faboul.se/dagar/v2.1/2022"
     );
     const holidays = response.data.dagar
         .filter(
