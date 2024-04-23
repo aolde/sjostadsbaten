@@ -13,7 +13,7 @@
         "@types/react-dom": "18.0.5",
         "dayjs": "1.11.3",
         "framer-motion": "6.3.5",
-        "gh-pages": "4.0.0",
+        "gh-pages": "5.0.0",
         "mixpanel-browser": "2.45.0",
         "react": "18.1.0",
         "react-dom": "18.1.0",
